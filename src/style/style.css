@@ -1,1 +1,265 @@
-nav span
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:       La Delicia - Launch X Kata Semana 2
+
+Author:          Emmanuel Hernández
+Website:         www.jeemdev.com
+First Color:     #f8f2ee;
+Second Color:    #2e2523;
+Third Color:     #9c7e6f;
+Fourth Color:    #e02340; 
+Fifth Color:     #DECBBA;        
+Version:         1.0
+main-font:       'Raleway', sans-serif
+Headers:         'Noto Serif Pro', sans-serif
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+A. GLOBAL
+    1. ROOT
+    2. GLOBAL STYLES
+    3. GLOBAL TEXTS
+    4. GLOBAL BUTTONS
+    5. GLOBAL ICONS
+
+B. HTML ELEMENTS STYLING
+    1. SECTION
+    3. HEADER
+
+C. SECTIONS (CUSTOM CLASSES & IDs)
+    1. Header
+    2. Hero
+    3. Clinics Banner
+    4. Why
+    5. Preparations
+    6. Contact
+    7. Footer
+-------------------------------------------------------------------*/
+
+
+/*=============================================
+=         START SECTION | A. GLOBAL           =
+=============================================*/
+/*----------  START SUBSECTION | ROOT  ----------*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;800;900&display=swap');
+
+:root {
+    --text_color     : #2e2523;
+    --text_font-title: 'Noto Serif Display', serif;
+    --text_font-text : 'Raleway', sans-serif;
+    --text_size-title: 32px;
+    --text_size-text : 18px;
+    --color_first    : #f8f2ee;
+    --color_second   : #2e2523;
+    --color_third    : #977962;
+    --color_fourth   : #e02340;
+}
+/*----------  END SUBSECTION | ROOT   ----------*/
+
+/*----------  START SUBSECTION | GLOBAL STYLES   ----------*/
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 82.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    font-family: var(--text_font-text);
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: var(--color_fourth);
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--color_third);
+}
+
+body {
+    background-color: var(--color_first);
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    height: 100%;
+}
+/*----------  END SUBSECTION | GLOBAL STYLES   ----------*/
+/*----------  START SUBSECTION | GLOBAL TEXT   ----------*/
+h1 {
+    font-family: var(--text_font-title);
+    font-size: 4.9rem;
+    font-weight: 800;
+    line-height: 1.2em;
+    color: var(--text_color);
+}
+
+h2 {
+    font-family: var(--text_font-title);
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2em;
+    color: var(--text_color);
+}
+
+p {
+    font-family: var(--text_font-text);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text_color);
+    line-height: 1em;
+}
+/*----------  END SUBSECTION | GLOBAL TEXT   ----------*/
+
+/*----------  START SUBSECTION | GLOBAL BUTTONS   ----------*/
+
+
+.btn {
+    position: relative;
+    cursor: pointer;
+    padding: 1.2rem .2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--text_color);
+    border: 1px solid transparent;
+}
+
+.btn__icon{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 65px
+}
+/*----------  END SUBSECTION | GLOBAL BUTTONS   ----------*/
+/*============ FOOTER SECTION |  A. Global  =========*/
+
+/*=============================================
+=   START SECTION | B. HTML ELEMENTS STYLING     =
+=============================================*/
+
+section {
+    padding: 5rem 10%;
+}
+
+header {
+    padding        : 3rem 0;
+    display        : inline-flex;
+    align-items    : center;
+    justify-content: space-around;
+}
+
+/*=====  END OF SECTION HTML B. ELEMENTS STYLING  ======*/
+
+/*=============================================
+=       START SECTION | C. SECTIONS (CUSTOM CLASSES & IDs)      =
+=============================================*/
+
+
+video {
+    z-index: -10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.selection__overlay {
+    z-index: -5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color_first);
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.selection__bg--img {   
+    background: url(/assets/img/selection-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -4;
+    position: absolute;
+}
+
+.selection__img--isotype {
+    max-width: 60%;
+    margin-bottom: 2rem;
+}
+
+.selection__title {
+    font-size: 94px;
+    margin-bottom: 2rem;
+}
+
+.selection__subtitle {
+    font-size: 50px;
+    margin-bottom: 5.6rem;
+}
+
+main.selection__bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+
+.selection__btn--wrapper button:nth-child(1){
+    margin-right: 6rem;
+}
+
+.selection__btn--wrapper {
+    display: flex;
+    align-items: center;
+    width: 42rem
+}
+
+.selection__btn--wrapper{
+    background-color: transparent;
+    z-index: -1;
+    border-radius: 50px;
+}
+
+.selection__btn--wrapper button.btn{
+    background-color: var(--color_first);
+    border: 2px solid transparent;
+    border-radius: 50px;
+    padding: 1.2rem 3rem
+}
+
+.selection__btn--wrapper button.btn:hover {
+    border: 2px solid var(--color_fourth);
+    border-radius: 50px
+}
+

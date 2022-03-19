@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selección | La Delicia</title>
+    <link rel="stylesheet" href="./src/style/style.css">
 </head>
-<body>
-    <h1>Hola</h1>
 
-    <h2>Selecciona una página</h2>
-    
-    <a href="./clientes.html">
-        <button>Ver Clientes</button>
-    </a>
-    
-    <a href="./pastelero.html">
-        <button>Ver Pastelero</button>
-    </a>
+<body>
+    <video src="./assets/img/bg-video-start.mp4" autoplay muted loop></video>
+    <div class="selection__overlay"></div>
+    <div class="selection__bg--img"></div>
+    <main class="selection__bg">
+        <img class="selection__img--isotype" src="./assets/img/isotipo.png" alt="Isotipo la Delicia" />
+        <h1 class="selection__title">BIENVENIDO</h1>
+        <h2 class="selection__subtitle">Seleccione una página</h2>
+        <div class="selection__btn--wrapper">
+            <a href="./clientes.html">
+                <button class="btn">Ver Clientes <img class="btn__icon" src="./assets/img/btn-icon.svg"
+                        alt="Icono La Delicia"></button>
+            </a>
+            <a href="./pastelero.html">
+                <button class="btn">Ver Pastelero <img class="btn__icon" src="./assets/img/btn-icon.svg"
+                        alt="Icono La Delicia"></button>
+            </a>
+        </div>
+    </main>
 </body>
+
 </html>
