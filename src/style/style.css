@@ -82,15 +82,15 @@ html {
 }
 
 html::-webkit-scrollbar{
-    width: 1rem;
+    width: .5rem;
 }
 
 html::-webkit-scrollbar-track {
-    background-color: var(--color_fourth);
+    background-color: var(--color_first);
 }
 
 html::-webkit-scrollbar-thumb {
-    background-color: var(--color_third);
+    background-color: var(--color_fourth);
 }
 
 body {
@@ -103,6 +103,10 @@ img {
     max-height: 100%;
     height: 100%;
 }
+a, a:visited, a:hover, a:active {
+    color: inherit;
+}
+
 /*----------  END SUBSECTION | GLOBAL STYLES   ----------*/
 /*----------  START SUBSECTION | GLOBAL TEXT   ----------*/
 h1 {
@@ -126,12 +130,15 @@ p {
     font-size: 16px;
     font-weight: 500;
     color: var(--text_color);
-    line-height: 1em;
+    line-height: 1.8em;
 }
 /*----------  END SUBSECTION | GLOBAL TEXT   ----------*/
 
 /*----------  START SUBSECTION | GLOBAL BUTTONS   ----------*/
 
+.btn__wrap{
+        z-index: 10;
+}
 
 .btn {
     position: relative;
@@ -140,7 +147,14 @@ p {
     text-transform: uppercase;
     font-weight: 600;
     color: var(--text_color);
-    border: 1px solid transparent;
+    border: 2px solid transparent;
+    background-color: var(--color_first);
+    border-radius: 50px;
+}
+
+.btn:hover {
+    background-color: var(--color_first);
+    color: var(--color_fourth);
 }
 
 .btn__icon{
@@ -170,11 +184,11 @@ header {
 
 /*=====  END OF SECTION HTML B. ELEMENTS STYLING  ======*/
 
-/*=============================================
-=       START SECTION | C. SECTIONS (CUSTOM CLASSES & IDs)      =
-=============================================*/
+/*======================================================
+=  START SECTION | C. SECTIONS (CUSTOM CLASSES & IDs)  =
+======================================================*/
 
-
+/*----------  START SUBSECTION | SELECTION   ----------*/
 video {
     z-index: -10;
     position: absolute;
@@ -234,21 +248,10 @@ main.selection__bg {
     overflow: hidden;
 }
 
-
-.selection__btn--wrapper button:nth-child(1){
-    margin-right: 6rem;
-}
-
 .selection__btn--wrapper {
     display: flex;
     align-items: center;
-    width: 42rem
-}
-
-.selection__btn--wrapper{
-    background-color: transparent;
-    z-index: -1;
-    border-radius: 50px;
+    width: 42rem;
 }
 
 .selection__btn--wrapper button.btn{
@@ -260,6 +263,103 @@ main.selection__bg {
 
 .selection__btn--wrapper button.btn:hover {
     border: 2px solid var(--color_fourth);
-    border-radius: 50px
+    border-radius: 50px;
+    color: var(--text_font-text);
 }
 
+.selection__btn--wrapper button:nth-child(1){
+    margin-right: 6rem;
+}
+/*----------  END SUBSECTION | SELECTION   ----------*/
+
+/*----------  START SUBSECTION | HEADER   ----------*/
+.header__container{
+    width: 100%;
+    padding: 0;
+    border-bottom: 1px solid var(--color_third);
+}
+.header__container .header__logo img {
+    max-width: 30%;
+}
+
+.header__container .header__nav ul {
+    display: flex;
+    list-style-type: none;
+    margin-right: -10rem;
+    
+}
+
+.header__container .header__nav ul li {
+    margin-right: 3rem;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--text_color);
+}
+
+.header__container .header__nav ul li:after {
+    content: "\2022";
+    font-size: 2rem;
+    color: #e02340;
+    position: relative;
+    top: .3rem;
+    right: -1.5rem;
+}
+
+.header__container .header__nav ul li:last-child:after{
+    content: "";
+}
+
+.header__container .header__nav ul li:hover {
+    color: var(--color_fourth);
+}
+
+
+.header__container .header__cart:hover i, .header__container .header__cart:hover button   {
+    color: var(--color_fourth);
+}
+
+.header__container .header__cart i {
+    color: var(--text_color);
+}
+
+.header__container .header__cart button{
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 0rem;
+}
+/*----------  END SUBSECTION | HEADER     ----------*/
+
+/*----------  START SUBSECTION | CLIENT Hero   ----------*/
+.client__hero {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/assets/img/cliente-hero.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.client__hero .client__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate( 0, -50%)
+}
+
+.client__hero .client__wrapper h1{
+    font-size: 135px;
+    margin-bottom: 2rem;
+}
+
+.client__hero .client__wrapper p {
+    max-width: 40%;
+    margin-bottom: 3rem;
+}
+
+.client__wrapper a {
+    z-index: 10;
+    position: absolute;
+}
+/*----------  END SUBSECTION | CLIENT HERO  ----------*/
+
+/*=====  END OF SECTION C. SECTIONS (CUSTOM CLASSES & IDs)   ======*/
