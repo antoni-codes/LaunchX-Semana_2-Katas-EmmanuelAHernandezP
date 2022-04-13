@@ -6,25 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selección | La Delicia</title>
-    <link rel="stylesheet" href="./src/style/style.css">
+
+    <!-- /FAVICON/ -->
+    <link type="image/x-icon" href="assets/img/favicon.png" rel="shortcut icon">
+    <!-- /CSS - CUSTOM STYLESHEET/ -->
+    <link href="src/style/style.css" rel="stylesheet">
+    <!-- /CDN - BOXICONS/ -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
+    <!-- /JS - SWIPER/ -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- /CDN - SCROLL REVEAL/ -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
-    <video src="./assets/img/bg-video-start.mp4" autoplay muted loop></video>
+    <video src="./assets/img/bg-selection-video.mp4" autoplay muted loop></video>
     <div class="selection__overlay"></div>
-    <div class="selection__bg--img"></div>
-    <main class="selection__bg">
-        <img class="selection__img--isotype" src="./assets/img/isotipo.png" alt="Isotipo la Delicia" />
-        <h1 class="selection__title">BIENVENIDO</h1>
-        <h2 class="selection__subtitle">Seleccione una página</h2>
-        <div class="selection__btn--wrapper">
+    <img class="selection__img-bg" src="assets/img/overlay-selection-img.png" alt="">
+    <main class="selection container grid">
+        <img class="selection__img-isotype" src="./assets/img/logotipo.png" alt="Logotipo la Delicia">
+        <div class="selection__data">
+            <h1 class="selection__title">BIENVENIDO</h1>
+            <h2 class="selection__subtitle">Seleccione una página</h2>
+        </div>
+        <div class="selection__buttons">
             <a href="./clientes.html">
-                <button class="btn">Ver Clientes <img class="btn__icon" src="./assets/img/btn-icon.svg"
-                        alt="Icono La Delicia"></button>
+                <button class="button selection__button">
+                    Ver Clientes
+                    <img class="button__icon" src="./assets/img/button-icon.svg" alt="Icono La Delicia">
+                </button>
             </a>
             <a href="./pastelero.html">
-                <button class="btn">
-                    Ver Pastelero <img class="btn__icon" src="./assets/img/btn-icon.svg" alt="Icono La Delicia">
+                <button class="button selection__button">
+                    Ver Pastelero
+                    <img class="button__icon" src="./assets/img/button-icon.svg" alt="Icono La Delicia">
                 </button>
             </a>
         </div>
