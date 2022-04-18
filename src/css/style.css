@@ -1,0 +1,761 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:       La Delicia - Launch X Kata Semana 2
+
+Author:          Emmanuel Hernández
+Website:         www.jeemdev.com
+First Color:     #f8f2ee;
+Second Color:    #2e2523;
+Third Color:     #9c7e6f;
+Fourth Color:    #e02340; 
+Fifth Color:     #DECBBA;        
+Version:         1.0
+main-font:       'Raleway', sans-serif
+Headers:         'Noto Serif Pro', sans-serif
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+A. GLOBAL
+    1. ROOT
+    2. GLOBAL STYLES
+    3. GLOBAL TEXTS
+    4. GLOBAL BUTTONS
+    5. GLOBAL ICONS
+
+B. HTML ELEMENTS STYLING
+    1. SECTION
+    3. HEADER
+
+C. SECTIONS (CUSTOM CLASSES & IDs)
+    1. 
+-------------------------------------------------------------------*/
+
+
+/*=============================================
+=         START SECTION | A. GLOBAL           =
+=============================================*/
+
+/*----------  START SUBSECTION | ROOT  ----------*/
+/*-- GOOGLE FONTS --*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;800;900&display=swap');
+
+/*-- VARIABLES CSS --*/
+:root {
+    /*-- /Header Height --*/
+    --header_height: 3.5rem;
+
+    /*-- /Font Family --*/
+    --font_family-body : 'Raleway', sans-serif;
+    --font_family-title: 'Noto Serif Display', serif;
+
+    /*-- /Font Sizes --*/
+    --font_size-h1     : 1.5em;
+    --font_size-h2     : 1.25em;
+    --font_size-h3     : 1em;
+    --font_size-biggest: 2em;
+    --font_size-big    : 1.5em;
+    --font_size-normal : 1em;
+    --font_size-small  : .813em;
+    --font_size-smaller: .75em;
+
+    /*-- /Font Weight/ --*/
+    --font_weight-bolder  : 900;
+    --font_weight-semibold: 600;
+    --font_weight-medium  : 500;
+
+    /*-- /Colors/ --*/
+    --color_first : #f8f2ee;
+    --color_second: #977962;
+    --color_third : #e02340;
+    --color_text  : #2e2523;
+
+    /*-- /Background Colors/ --*/
+    --color_body: linear-gradient(100deg,
+            hsl(20deg 100% 99%) 0%,
+            hsl(20deg 100% 99%) 3%,
+            hsl(20deg 100% 99%) 7%,
+            hsl(20deg 100% 99%) 12%,
+            hsl(20deg 100% 99%) 18%,
+            hsl(20deg 86% 99%) 25%,
+            hsl(20deg 76% 97%) 34%,
+            hsl(20deg 73% 96%) 43%,
+            hsl(19deg 71% 94%) 53%,
+            hsl(19deg 70% 93%) 63%,
+            hsl(21deg 69% 93%) 73%,
+            hsl(23deg 66% 94%) 82%,
+            hsl(25deg 63% 96%) 90%,
+            hsl(28deg 59% 97%) 96%,
+            hsl(30deg 50% 99%) 100%);
+    --color_container: linear-gradient(136deg, hsl(43, 73%, 96%) 0%, hsl(49, 86%, 93%) 100%);
+
+    /*-- /Margins/ --*/
+    --mrl_1_5: 1.5rem;
+    --mb_2_5 : 2.5rem;
+    --mb_2   : 2rem;
+    --mb_1_5 : 1.5rem;
+    --mb_1   : 1rem;
+    --mb_0-75: .75rem;
+    --mb_0-25: .25rem;
+    --mb_0-5 : .5rem;
+
+    /*-- /Z-Index/ --*/
+    --z-behind : -10;
+    --z-tooltip: 10;
+    --z-fixed  : 100;
+}
+
+/*-- RESPONSIVE TIPOGRAPHY --*/
+@media screen and (min-width: 992px) {
+    :root {
+        --font_size-h1     : 2.25em;
+        --font_size-h2     : 1.5em;
+        --font_size-h3     : 1.25em;
+        --font_size-biggest: 4em;
+        --font_size-big    : 2.5em;
+        --font_size-normal : 1em;
+        --font_size-small  : .875em;
+        --font_size-smaller: .813em;
+    }
+}
+
+/*----------  START SUBSECTION | GLOBAL STYLES   ----------*/
+* {
+    margin            : 0;
+    padding           : 0;
+    -webkit-box-sizing: border-box;
+    box-sizing        : border-box;
+    outline           : none;
+    border            : none;
+    text-decoration   : none;
+    -webkit-transition: .3s;
+    transition        : .3s;
+}
+
+html {
+    overflow-x        : hidden;
+    scroll-behavior   : smooth;
+    scroll-padding-top: 5rem;
+}
+
+html::-webkit-scrollbar {
+    width: .5rem;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: var(--color_first);
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--color_fourth);
+}
+
+body {
+    font-family: var(--font_family-body);
+    font-size  : var(--font_size-normal);
+    background : var(--color_body);
+    color      : var(--color_text);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color      : var(--color_text);
+    font-family: var(--font_family-title);
+}
+
+p {
+    font-size  : var(--font_size-normal);
+    font-weight: var(--font_weight-medium);
+    line-height: 1.8em;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+    color: var(--color_second);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height   : auto;
+}
+
+button,
+input {
+    border : none;
+    outline: none;
+}
+
+button {
+    cursor     : pointer;
+    font-family: var(--font_family-body);
+    font-size  : var(--font_size-normal);
+}
+
+/*============ FOOTER SECTION |  A. Global  =========*/
+
+
+/*=============================================
+=  START SECTION | B. HTML ELEMENTS STYLING   =
+=============================================*/
+
+/*----------  START SUBSECTION | REUSABLE CSS CLASSES & IDs   ----------*/
+.body__margin {
+    margin: var(--header_height) 0 0 0;
+}
+
+/*-- /Sections/ --*/
+.section {
+    padding: 5rem 10%;
+}
+
+.section__title {
+    font-size    : var(--font_size-biggest);
+    margin-bottom: var(--mb_2);
+    text-align   : center;
+}
+
+/*-- /Buttons/ --*/
+.buttons {
+    z-index: var(--z-tooltip)
+}
+
+.button {
+    position        : relative;
+    white-space     : nowrap;
+    background-color: var(--color_first);
+    border          : 2px solid transparent;
+    border-radius   : 50px;
+    padding         : 1rem .5rem;
+    color           : var(--color_text);
+    font-size       : var(--font_size-small);
+    font-weight     : 600;
+    text-transform  : uppercase;
+}
+
+.button:hover {
+    background-color: var(--color_first);
+    color           : var(--color_fourth);
+    border          : 2px solid var(--color_third);
+}
+
+.button__icon {
+    z-index : -1;
+    position: absolute;
+    top     : -5px;
+    right   : -50px;
+    width   : 60px
+}
+
+/*----------  START SUBSECTION | LAYOUT   ----------*/
+.container {
+    max-width   : 968px;
+    margin-left : var(--mrl_1_5);
+    margin-right: var(--mrl_1_5);
+}
+
+.grid {
+    display: grid;
+}
+
+.main {
+    /*-- For Animations --*/
+    overflow: hidden;
+
+}
+
+/*=====  END OF SECTION HTML B. ELEMENTS STYLING  ======*/
+
+
+/*=============================================
+=   START SECTION | C. CUSTOM CLASSES & IDs   =
+=============================================*/
+
+/***********  PAGE START | SELECCIÓN   ***********/
+video {
+    z-index   : var(--z-behind);
+    position  : absolute;
+    top       : 0;
+    left      : 0;
+    width     : 100%;
+    height    : 100%;
+    object-fit: cover;
+    overflow  : hidden;
+}
+
+.selection__overlay {
+    z-index         : -5;
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+    height          : 100%;
+    width           : 100%;
+    background-color: var(--color_first);
+    opacity         : 0.9;
+}
+
+.selection__img-bg {
+    position: absolute;
+    top     : 0;
+    left    : 0;
+    width   : 100%;
+    height  : 30%;
+    z-index : -1;
+}
+
+.selection {
+    gap            : 2em 0;
+    text-align     : center;
+    justify-content: center;
+    align-content  : center;
+}
+
+.selection__img-isotype {
+    max-width    : 310px;
+    justify-self : center;
+    margin-top   : 7rem;
+    margin-bottom: 12rem;
+}
+
+.selection__title {
+    font-size    : 3.2em;
+    margin-bottom: var(--mb_0-75);
+}
+
+.selection__subtitle {
+    font-size    : 1.2em;
+    margin-bottom: var(--mb_2_5);
+}
+
+.selection__buttons {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    gap            : 3rem;
+}
+
+.selection__button {
+    background-color: var(--color_first);
+    border          : 2px solid transparent;
+    border-radius   : 50px;
+    padding         : 1rem 2rem;
+}
+
+.selection__button:hover {
+    border-radius: 50px;
+    color        : var(--text_font-text);
+}
+
+/***********  PAGE END | SELECCIÓN   ***********/
+
+/***********  PAGE START | CLIENTES   ***********/
+/*----------  START SUBSECTION | HEADER   ----------*/
+.header {
+    z-index         : var(--z-fixed);
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    width           : 100%;
+    background-color: var(--color_first);
+    border-bottom   : .1px solid var(--color_second);
+    padding         : 1.5rem 0;
+}
+
+/*----------  START SUBSECTION | NAV   ----------*/
+.nav {
+    height         : var(--header_height);
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+}
+
+.nav__toggle,
+.nav__link,
+.nav__close,
+.nav__cart {
+    color: var(--color_second);
+}
+
+@media screen and (max-width: 767px) {
+    .nav__menu {
+        z-index        : var(--z-fixed);
+        position       : fixed;
+        top            : -150%;
+        left           : 0;
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        width          : 100%;
+        height         : 100%;
+        padding        : 3.5rem 0;
+        background     : var(--color_first);
+        transition     : .4s;
+    }
+}
+
+.nav__list {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    row-gap       : 7rem;
+}
+
+.nav__link {
+    font-size     : var(--font_size-biggest);
+    font-weight   : var(--font_weight-medium);
+    text-transform: uppercase;
+    transition    : .4s;
+}
+
+.nav__close {
+    position : absolute;
+    top      : 1.5rem;
+    left     : 1rem;
+    cursor   : pointer;
+    font-size: 3em;
+}
+
+.nav__toggle {
+    font-size: 2.15em;
+    cursor   : pointer;
+}
+
+.nav__logo-img {
+    align-items: center;
+    width      : 100px;
+}
+
+.nav__cart {
+    position   : relative;
+    display    : inline-flex;
+    align-items: center;
+    gap        : .1rem;
+    font-size  : 1.2em;
+}
+
+.nav__cart-icon {
+    position        : absolute;
+    top             : .2rem;
+    left            : -1rem;
+    padding-top     : .4rem;
+    background-color: var(--color_first);
+    width           : 30px;
+    height          : 30px;
+    border-radius   : 50%;
+    text-align      : center;
+}
+
+.nav__cart-total {
+    z-index      : var(--z-behind);
+    width        : 40px;
+    height       : 40px;
+    border-radius: 50%;
+    border       : 1.5px solid var(--color_second);
+    color        : var(--color_text);
+    text-align   : center;
+}
+
+.nav__link:hover,
+.nav__close:hover,
+.nav__cart:hover {
+    color: var(--color_third);
+}
+
+/*-- /Show Menu/ --*/
+.show-menu {
+    top: 0;
+}
+
+/*-- /Change Background Header/ --*/
+
+/*-- /Active Link/ --*/
+
+
+/*----------  START SUBSECTION | HOME   ----------*/
+.home {
+    height: 100vh;
+}
+
+.home__title {
+    font-size    : 3rem;
+    margin-bottom: var(--mb_2);
+    padding-top  : 9.5rem;
+}
+
+.home__content {
+    position: relative;
+    row-gap : 1rem;
+}
+
+.home__text {
+    margin-bottom: var(--mb_1);
+}
+
+.home__data {
+    display    : inline-flex;
+    align-items: center;
+    gap        : 1rem;
+}
+
+.home__data-img {
+    width: 320px;
+}
+
+.swiper-pagination {
+    position  : initial;
+    margin-top: var(--mb_1);
+    color     : #000;
+}
+
+/*----------  START SUBSECTION | FLAVORS   ----------*/
+.flavors__container {
+    position: relative;
+    margin  : 0;
+}
+
+.flavors__content {
+    width        : 100%;
+    background   : var(--color_container);
+    border-radius: 2px;
+    margin-top   : 3rem;
+    padding      : 2.5rem 0 1.5rem;
+}
+
+.flavors__title {
+    font-size: var(--font_size-biggest);
+}
+
+.flavors__subtitle {
+    position : absolute;
+    top      : -1.2rem;
+    font-size: var(--font_size-big);
+}
+
+.flavors__subtitle-price {
+    position : absolute;
+    top      : -1.2rem;
+    right    : 0;
+    font-size: var(--font_size-big);
+}
+
+.flavors__separator {
+    width        : 100%;
+    margin-bottom: 1rem;
+}
+
+.flavors__data {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    margin-bottom  : 1.2rem;
+    padding        : 0rem 1rem;
+}
+
+.flavors__name {
+    flex: 1;
+}
+
+.flavors__img {
+    width       : 70px;
+    height      : 10px;
+    padding-left: 1rem;
+}
+
+.flavors__price {
+    flex      : 1;
+    text-align: right;
+}
+
+/*----------  START SUBSECTION | DECORATIONS   ----------*/
+.decorations__container {
+    position: relative;
+    margin  : 0;
+}
+
+.decorations__content {
+    width        : 100%;
+    background   : var(--color_container);
+    border-radius: 2px;
+    margin-top   : 3rem;
+    padding      : 2.5rem 0 1.5rem;
+}
+
+.decorations__subtitle {
+    position : absolute;
+    top      : -1.2rem;
+    font-size: var(--font_size-big);
+}
+
+.decorations__subtitle-price {
+    position : absolute;
+    top      : -1.2rem;
+    right    : 0;
+    font-size: var(--font_size-big);
+}
+
+.decorations__data {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    margin-bottom  : var(--mb_1_5);
+    padding        : 0rem 1rem;
+}
+
+.decorations__name {
+    flex: 1;
+}
+
+.decorations__img {
+    width       : 70px;
+    height      : 10px;
+    padding-left: 1rem;
+}
+
+.decorations__price {
+    flex      : 1;
+    text-align: right;
+}
+
+/*----------  START SUBSECTION | FORM   ----------*/
+.form__inputs-subtitle {
+    margin-bottom: var(--mb_1);
+    font-size    : var(--font_size-big);
+}
+
+.form__content {
+    margin-bottom: var(--mb_2_5);
+}
+
+.form__fieldset {
+    margin-bottom: var(--mb_1_5);
+    border       : 1px solid var(--color_second);
+    border-radius: 20px;
+    padding      : 0.25rem 1rem .6rem;
+}
+
+.form__tag {
+    padding: 0 .5rem;
+}
+
+.form__input {
+    background-color: transparent;
+}
+
+.form__input::placeholder {
+    color: var(--color_second);
+}
+
+.form__checkboxes {
+    display              : grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.form__checkbox {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    margin-bottom  : var(--mb_0-75);
+    padding-right  : 1.5rem;
+}
+
+.form__checkbox-input {
+    padding-right: 0;
+    padding-left : 1.5rem;
+}
+
+.form__button {
+    display        : flex;
+    justify-content: center;
+    padding-right  : 2.5rem;
+}
+
+input[type="checkbox"]:checked {
+    background: var(--color_third);
+}
+
+/***********  PAGE END | CLIENTES   ***********/
+
+/*----------  START SUBSECTION | FOOTER   ----------*/
+.footer {
+    overflow: hidden;
+}
+
+.footer__container {
+    row-gap: 2rem;
+}
+
+.footer__separator {
+    width: 100%;
+    height: 100%;
+    transform: rotate(180deg);
+}
+
+.footer__logo {
+    margin-bottom: var(--mb_1_5);
+}
+
+.footer__logo-img {
+    width: 170px;
+}
+
+.footer__description {
+    margin-bottom: var(--mb_2);
+}
+
+.footer__social {
+    display   : flex;
+    column-gap: .5rem;
+}
+
+.footer__social-link {
+    display   : inline-flex;
+    background: var(--color_container);
+    padding   : 0.75rem;
+    color     : var(--color_text);
+    font-size : 1.5em;
+    transition: all 300ms
+}
+
+.footer__social-link:hover {
+    background: var(--color_body);
+}
+
+.footer__title {
+    font-size: var(--font_size-h2);
+    margin-bottom: var(--mb_0-5);
+}
+
+.footer__links {
+    display: grid;
+    row-gap: .85rem;
+}
+
+.footer__link {
+    font-size : var(--font_size-normal);
+    color     : var(--color_second);
+    transition: .3s;
+}
+
+.footer__link:hover {
+    color: var(--color_text);
+}
+
+.footer__copy {
+    display: block;
+    text-align: center;
+    margin-top: 2.5rem;
+    font-size: var(--font_size-smaller);
+}
+
+/*=====  END OF SECTION C. SECTIONS (CUSTOM CLASSES & IDs)   ======*/

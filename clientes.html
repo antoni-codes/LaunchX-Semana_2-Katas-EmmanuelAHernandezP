@@ -6,216 +6,507 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clientes | La Delicia</title>
-    <!-- CSS FILE -->
-    <link rel="stylesheet" href="./src/style/style.css">
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
-        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- /FAVICON/ -->
+    <link type="image/x-icon" href="assets/img/favicon.png" rel="shortcut icon">
+    <!-- /CSS - CUSTOM STYLESHEET/ -->
+    <link href="src/css/style.css" rel="stylesheet">
+    <!-- /CDN - BOXICONS/ -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
+    <!-- /CDN - CSS SWIPER/ -->
+    <link href="./src/css/swiper-bundle.min.css" rel="stylesheet">
+    <!-- /CDN - JS SWIPER/ -->
+    <script src="./src/js/swiper-bundle.min.js"></script>
+    <!-- /CDN - JS SCROLL REVEAL/ -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
-    <header class="header__container">
-        <a class="header__logo" href="index.html">
-            <img src="assets/img/logo.png" alt="Logo La Delicia">
-        </a>
-        <nav class="header__nav">
-            <ul>
-                <li><a href="index.html">Selección</a></li>
-                <li><a href="clientes.html">Clientes</a></li>
-                <li><a href="pastelero.html">Pastelero</a></li>
-            </ul>
-        </nav>
-        <a class="header__cart btn__wrap" href="#">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <button class="btn">
-                Carrito 
-                <img class="btn__icon" src="./assets/img/btn-icon.svg" alt="Icono La Delicia">
-            </button>
-        </a>
-    </header>
+    <!--====  START SECTION | HEADER =====-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a class="nav__link" href="index.html">Selección</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="clientes.html">Clientes</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="pastelero.html">Pastelero</a>
+                    </li>
+                </ul>
 
-    <section class="client__hero">
-        <div class="client__wrapper">
-            <h1>Menú</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, dolor. Repellat corrupti enim deleniti.
-                Voluptate dicta dignissimos error accusamus sapiente.</p>
-            <a class="btn__wrap" href="#menu__container">
-                <button class="btn">
-                    Conocer el Menú
-                    <img class="btn__icon" src="./assets/img/btn-icon.svg" alt="Icono La Delicia">
-                </button>
+                <div class="nav__close" id="nav-close">
+                    <i class="bx bx-x"></i>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="bx bx-align-left"></i>
+            </div>
+
+            <a class="nav__logo" href="index.html">
+                <img class="nav__logo-img" src="assets/img/logo-light-img.png" alt="Logotipo La Delicia">
             </a>
-        </div>
-    </section>
 
-    <main id="menu__container">
-        <section>
-        <h2>PASTELES</h2>
-        <table border="1">
-            <tr>
-                <th>SABORES</th>
-                <th></th>
-                <th>COSTO</th>
-            </tr>
-            <tr>
-                <td class="menu__titles">
-                    <ul>
-                        <li>Sabor de Tres Leches</li>
-                        <li>Sabor Carlota</li>
-                        <li>Sabor de Zanahoria</li>
-                        <li>Sabor de Chocolate</li>
-                        <li>Sabor de Turin</li>
-                        <li>Sabor de Natilla</li>
-                        <li>Sabor de Oreo</li>
-                        <li>Sabor de Cheescake</li>
-                    </ul>
-                </td>
-                <td class="menu__arrow">
-                    <ul>
-                        <li><img src="./assets/img/menu-arrow.png" alt="Menu fleca hacía precios"></li>
-                        <li><img src="./assets/img/menu-arrow.png" alt="Menu fleca hacía precios"></li>
-                        <li><img src="./assets/img/menu-arrow.png" alt="Menu fleca hacía precios"></li>
-                        <li><img src="./assets/img/menu-arrow.png" alt="Menu fleca hacía precios"></li>
-                        <li><img src="./assets/img/menu-arrow.png" alt="Menu fleca hacía precios"></li>
-                        <li><img src="./assets/img/menu-arrow.png" alt="Menu fleca hacía precios"></li>
-                        <li><img src="./assets/img/menu-arrow.png" alt="Menu fleca hacía precios"></li>
-                        <li><img src="./assets/img/menu-arrow.png" alt="Menu fleca hacía precios"></li>
-                    </ul>
-                </td>
-                <td class="menu__prices">
-                    <ul>
-                        <li>$350.00</li>
-                        <li>$340.00</li>
-                        <li>$520.00</li>
-                        <li>$550.00</li>
-                        <li>$150.00</li>
-                        <li>$140.00</li>
-                        <li>$250.00</li>
-                        <li>$140.00</li>
-                    </ul>
-                </td>
-            </tr>
-        </table>
+            <div class="nav__cart">
+                <i class="bx bxs-cart-alt nav__cart-icon"></i>
+                <p class="nav__cart-total">0</p>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <!--==== START SECTION | HOME =====-->
+        <section class="home container" id="home">
+            <div class="swiper home-swiper">
+                <h1 class="home__title">MENU <br> LA DELICIA</h1>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="home__content grid">
+                            <div class="home__text">
+                                <p>
+                                    Rico Pastel de chocolate relleno de mousse de cajeta con trozos de chocolate Milky
+                                    Way®
+                                    y pasitas con chocolate.
+                                    Decorado con mousse de cajeta y crema de chocolate.
+                                </p>
+                            </div>
+
+                            <div class="home__data">
+                                <a class="home__buttons" href="#menu__container">
+                                    <button class="button">
+                                        Ver Pastel
+                                        <img class="button__icon" src="./assets/img/button-icon.svg"
+                                            alt="Icono La Delicia">
+                                    </button>
+                                </a>
+                                <img class="home__data-img" src="assets/img/home-slider_1-img.png"
+                                    alt="Home Image Slider 1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="home__content grid">
+                            <div class="home__text">
+                                <p>
+                                    Delicioso Pastel de vainilla bañado con nuestra receta especial de tres leches y
+                                    licor de
+                                    café. Cubierto con crema de café, vainilla y canela.
+                                </p>
+                            </div>
+
+                            <div class="home__data">
+                                <a class="home__buttons" href="#menu__container">
+                                    <button class="button">
+                                        Ver Pastel
+                                        <img class="button__icon" src="./assets/img/button-icon.svg"
+                                            alt="Icono La Delicia">
+                                    </button>
+                                </a>
+                                <img class="home__data-img" src="assets/img/home-slider_2-img.png"
+                                    alt="Home Image Slider 1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="home__content grid">
+                            <div class="home__text">
+                                <p>
+                                    Budín con nuestra deliciosa mezcla de zanahorias, piña, nueces y pasas.
+                                    Decorado con suave crema de queso Philadelphia®.
+                                </p>
+                            </div>
+
+                            <div class="home__data">
+                                <a class="home__buttons" href="#menu__container">
+                                    <button class="button">
+                                        Ver Pastel
+                                        <img class="button__icon" src="./assets/img/button-icon.svg"
+                                            alt="Icono La Delicia">
+                                    </button>
+                                </a>
+                                <img class="home__data-img" src="assets/img/home-slider_3-img.png"
+                                    alt="Home Image Slider 1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="home__content grid">
+                            <div class="home__text">
+                                <p>
+                                    Pastel de avellanas, relleno con mousse de avellana y crocante de avellanas
+                                    tostadas.
+                                    Cubierto con mousse de chocolate y adornado con auténticos chocolates Ferrero®.
+                                </p>
+                            </div>
+
+                            <div class="home__data">
+                                <a class="home__buttons" href="#menu__container">
+                                    <button class="button">
+                                        Ver Pastel
+                                        <img class="button__icon" src="./assets/img/button-icon.svg"
+                                            alt="Icono La Delicia">
+                                    </button>
+                                </a>
+                                <img class="home__data-img" src="assets/img/home-slider_4-img.png"
+                                    alt="Home Image Slider 1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
         </section>
-        <br>
-        <br>
-        <br>
-
-        <h2>ADORNOS</h2>
-        <table border="1">
-            <tr>
-                <th>TIPO</th>
-                <th>COSTO</th>
-            </tr>
-            <tr>
-                <td>
-                    <ul>
-                        <li>Diseño de Superheroe</li>
-                        <li>Diseño de Boda</li>
-                        <li>Diseño de Feliz Cumpleaños</li>
-                        <li>Diseño de Caricatura</li>
-                        <li>Diseño de Autoretrato</li>
-                        <li>Diseño Minimalista</li>
-                        <li>Diseño Moderno </li>
-                        <li>Diseño de Personaje</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul class="no-style">
-                        <li>.............. $150.00</li>
-                        <li>.............. $240.00</li>
-                        <li>.............. $150.00</li>
-                        <li>.............. $100.00</li>
-                        <li>.............. $150.00</li>
-                        <li>.............. $90.00</li>
-                        <li>.............. $190.00</li>
-                        <li>.............. $210.00</li>
-                    </ul>
-                </td>
-            </tr>
-        </table>
-
-        <br>
-        <br>
-        <br>
-
-
-        <h2>Formulario de Pedidos</h2>
-        <form action="">
-            <label for="name">Nombre</label>
-            <input type="text" name="name" id="name" placeholder="ej. Emmanuel Hernández" required>
-            <hr>
-            <label for="tel">Teléfono</label>
-            <input type="tel" name="tel" id="tel" placeholder="ej. 55555555" required>
-            <hr>
-            <label for="email">Correo Electrónico</label>
-            <input type="email" name="email" id="email" placeholder="ej. correo@mail.com" required>
-            <hr>
-            <label for="description">Descripción General</label>
-            <input type="text" name="" id="" placeholder="ej. Mi pastel sin Fresas...">
-            <hr>
-            <h3>Sabores</h3>
-            <label for="sabor_1">Tres leches</label>
-            <input type="checkbox" name="sabor_1" id="sabor_1">
-
-            <label for="sabor_2">| Carlota</label>
-            <input type="checkbox" name="sabor_2" id="sabor_2">
-
-            <label for="sabor_3">| Zanahoria</label>
-            <input type="checkbox" name="sabor_3" id="sabor_3">
-
-            <label for="sabor_4">| Chocolate</label>
-            <input type="checkbox" name="sabor_4" id="sabor_4">
-
-            <label for="sabor_5">| Turin</label>
-            <input type="checkbox" name="sabor_5" id="sabor_5">
-
-            <label for="sabor_6">| Natilla</label>
-            <input type="checkbox" name="sabor_6" id="sabor_6">
-
-            <label for="sabor_7">| Oreo</label>
-            <input type="checkbox" name="sabor_7" id="sabor_7">
-
-            <label for="sabor_8">| Cheescake</label>
-            <input type="checkbox" name="sabor_8" id="sabor_8">
-            <hr>
-            <h3>Adornos</h3>
-            <label for="adorno_1">Superheroe</label>
-            <input type="checkbox" name="adorno_1" id="adorno_1">
-
-            <label for="adorno_2">| Boda</label>
-            <input type="checkbox" name="adorno_2" id="adorno_2">
-
-            <label for="adorno_3">| Feliz Cumpleaños</label>
-            <input type="checkbox" name="adorno_3" id="adorno_3">
-
-            <label for="adorno_4">| Caricatura</label>
-            <input type="checkbox" name="adorno_4" id="adorno_4">
-
-            <label for="adorno_5">| Autoretrato</label>
-            <input type="checkbox" name="adorno_5" id="adorno_5">
-
-            <label for="adorno_6">| Minimalista</label>
-            <input type="checkbox" name="adorno_6" id="adorno_6">
-
-            <label for="adorno_7">| Moderno</label>
-            <input type="checkbox" name="adorno_7" id="adorno_7">
-
-            <label for="adorno_8">| Personaje</label>
-            <input type="checkbox" name="adorno_8" id="adorno_8">
-        </form>
-
-        <br>
-        <br>
-        <br>
+        <!--===== END OF SECTION | HOME ======-->
     </main>
 
-    <footer>
-        <div>
-            <p>Pastelería la Delicia &copy | Tel: 55 55 55 55 | Horarios: Lunes - Domingo de 8:00am a 22:00pm</p>
+    <!--==== START SECTION | FLAVORS =====-->
+    <section class="section flavors">
+        <h2 class="section__title flavors__title">PASTELES</h2>
+
+        <div class="flavors__container container">
+            <h3 class="flavors__subtitle">Sabores</h3>
+            <h3 class="flavors__subtitle-price">Precio</h3>
+
+            <div class="flavors__content">
+                <div class="flavors__data">
+                    <p class="flavors__name">Tres Leches</p>
+                    <img class="flavors__img" src="assets/img/menu-arrow.png" alt="Selector">
+                    <p class="flavors__price">$350.00</p>
+                </div>
+
+                <img class="flavors__separator" src="assets/img/menu-separator.png" alt="Flavors separator">
+
+                <div class="flavors__data">
+                    <p class="flavors__name">Carlota</p>
+                    <img class="flavors__img" src="assets/img/menu-arrow.png" alt="Separador">
+                    <p class="flavors__price">$250.10</p>
+                </div>
+
+                <img class="flavors__separator" src="assets/img/menu-separator.png" alt="Flavors separator">
+
+                <div class="flavors__data">
+                    <p class="flavors__name">Zanahoria</p>
+                    <img class="flavors__img" src="assets/img/menu-arrow.png" alt="Separador">
+                    <p class="flavors__price">$550.80</p>
+                </div>
+
+                <img class="flavors__separator" src="assets/img/menu-separator.png" alt="Flavors separator">
+
+                <div class="flavors__data">
+                    <p class="flavors__name">Chocolate</p>
+                    <img class="flavors__img" src="assets/img/menu-arrow.png" alt="Separador">
+                    <p class="flavors__price">$650.66</p>
+                </div>
+
+                <img class="flavors__separator" src="assets/img/menu-separator.png" alt="Flavors separator">
+
+                <div class="flavors__data">
+                    <p class="flavors__name">Turin</p>
+                    <img class="flavors__img" src="assets/img/menu-arrow.png" alt="Separador">
+                    <p class="flavors__price">$310.40</p>
+                </div>
+
+                <img class="flavors__separator" src="assets/img/menu-separator.png" alt="Flavors separator">
+
+                <div class="flavors__data">
+                    <p class="flavors__name">Natilla</p>
+                    <img class="flavors__img" src="assets/img/menu-arrow.png" alt="Separador">
+                    <p class="flavors__price">$350.00</p>
+                </div>
+
+                <img class="flavors__separator" src="assets/img/menu-separator.png" alt="Flavors separator">
+
+                <div class="flavors__data">
+                    <p class="flavors__name">Oreo</p>
+                    <img class="flavors__img" src="assets/img/menu-arrow.png" alt="Separador">
+                    <p class="flavors__price">$477.00</p>
+                </div>
+
+                <img class="flavors__separator" src="assets/img/menu-separator.png" alt="Flavors separator">
+
+                <div class="flavors__data">
+                    <p class="flavors__name">Cheescake</p>
+                    <img class="flavors__img" src="assets/img/menu-arrow.png" alt="Separador">
+                    <p class="flavors__price">890.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--===== END OF SECTION | FLAVORS ======-->
+
+
+    <!--==== START SECTION | DECORATIONS =====-->
+    <section class="section decorations">
+        <h2 class="section__title decorations__title">Adornos</h2>
+
+        <div class="decorations__container container">
+            <h3 class="decorations__subtitle">Decoración</h3>
+            <h3 class="decorations__subtitle-price">Precio</h3>
+
+            <div class="flavors__content">
+                <div class="flavors__data">
+                    <p class="flavors__name">Ganache</p>
+                    <img class="flavors__img" src="assets/img/menu-arrow.png" alt="Selector">
+                    <p class="flavors__price">$90.00</p>
+                </div>
+
+                <img class="flavors__separator" src="assets/img/menu-separator.png" alt="Flavors separator">
+
+                <div class="flavors__data">
+                    <p class="flavors__name">Chocolate Blanco</p>
+                    <img class="flavors__img" src="assets/img/menu-arrow.png" alt="Separador">
+                    <p class="flavors__price">$150.00</p>
+                </div>
+
+                <img class="flavors__separator" src="assets/img/menu-separator.png" alt="Flavors separator">
+
+                <div class="flavors__data">
+                    <p class="flavors__name">Ferrero</p>
+                    <img class="flavors__img" src="assets/img/menu-arrow.png" alt="Separador">
+                    <p class="flavors__price">$250.00</p>
+                </div>
+
+                <img class="flavors__separator" src="assets/img/menu-separator.png" alt="Flavors separator">
+
+                <div class="flavors__data">
+                    <p class="flavors__name">Cocoa</p>
+                    <img class="flavors__img" src="assets/img/menu-arrow.png" alt="Separador">
+                    <p class="flavors__price">$150.66</p>
+                </div>
+
+                <img class="flavors__separator" src="assets/img/menu-separator.png" alt="Flavors separator">
+
+                <div class="flavors__data">
+                    <p class="flavors__name">Soletas</p>
+                    <img class="flavors__img" src="assets/img/menu-arrow.png" alt="Separador">
+                    <p class="flavors__price">$210.00</p>
+                </div>
+
+                <img class="flavors__separator" src="assets/img/menu-separator.png" alt="Flavors separator">
+
+                <div class="flavors__data">
+                    <p class="flavors__name">Philadelphia</p>
+                    <img class="flavors__img" src="assets/img/menu-arrow.png" alt="Separador">
+                    <p class="flavors__price">$190.00</p>
+                </div>
+
+                <img class="flavors__separator" src="assets/img/menu-separator.png" alt="Flavors separator">
+
+                <div class="flavors__data">
+                    <p class="flavors__name">Oreo</p>
+                    <img class="flavors__img" src="assets/img/menu-arrow.png" alt="Separador">
+                    <p class="flavors__price">$150.00</p>
+                </div>
+
+                <img class="flavors__separator" src="assets/img/menu-separator.png" alt="Flavors separator">
+
+                <div class="flavors__data">
+                    <p class="flavors__name">Choco Bites</p>
+                    <img class="flavors__img" src="assets/img/menu-arrow.png" alt="Separador">
+                    <p class="flavors__price">90.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--===== END OF SECTION | DECORATIONS ======-->
+
+    <!--==== START SECTION | FORM =====-->
+    <section class="section form">
+        <h2 class="section__title">Formulario de Pedidos</h2>
+
+        <form class="form__container container" action>
+            <h3 class="form__inputs-subtitle">Datos Personales</h3>
+            <div class="form__content">
+                <fieldset class="form__fieldset">
+                    <legend class="form__tag">Nombre*</legend>
+                    <input class="form__input" id="name" name="name" type="text" placeholder="ej. Emmanuel Hernández"
+                        required>
+                </fieldset>
+
+                <fieldset class="form__fieldset">
+                    <legend class="form__tag">Teléfono*</legend>
+                    <input class="form__input" id="tel" name="tel" type="tel" placeholder="ej. 55 55 55 55" required>
+                </fieldset>
+
+                <fieldset class="form__fieldset">
+                    <legend class="form__tag">Correo Electrónico*</legend>
+                    <input class="form__input" id="email" name="email" type="email" placeholder="ej. correo@mail.com"
+                        required>
+                </fieldset>
+
+                <fieldset class="form__fieldset">
+                    <legend class="form__tag">Descripción</legend>
+                    <input class="form__input" id="message" name="message" type="text"
+                        placeholder="ej. Mi pastel sin Fresas..." required>
+                </fieldset>
+            </div>
+
+            <h3 class="form__inputs-subtitle">Sabores</h3>
+            <div class="form__content form__checkboxes">
+                <div class="form__checkbox">
+                    <label for="sabor_1">Tres leches</label>
+                    <input class="form__checkbox-checkmark" id="sabor_1" name="sabor_1" type="checkbox">
+                </div>
+
+                <div class="form__checkbox form__checkbox-input">
+                    <label for="sabor_2">Carlota</label>
+                    <input class="form__checkbox-checkmark" id="sabor_2" name="sabor_2" type="checkbox">
+                </div>
+
+                <div class="form__checkbox">
+                    <label for="sabor_3">Zanahoria</label>
+                    <input class="form__checkbox-checkmark" id="sabor_3" name="sabor_3" type="checkbox">
+                </div>
+
+                <div class="form__checkbox form__checkbox-input">
+                    <label for="sabor_4">Chocolate</label>
+                    <input class="form__checkbox-checkmark" id="sabor_4" name="sabor_4" type="checkbox">
+                </div>
+
+                <div class="form__checkbox">
+                    <label for="sabor_5">Turin</label>
+                    <input class="form__checkbox-checkmark" id="sabor_5" name="sabor_5" type="checkbox">
+                </div>
+
+                <div class="form__checkbox form__checkbox-input">
+                    <label for="sabor_6">Natilla</label>
+                    <input class="form__checkbox-checkmark" id="sabor_6" name="sabor_6" type="checkbox">
+                </div>
+
+                <div class="form__checkbox">
+                    <label for="sabor_7">Oreo</label>
+                    <input class="form__checkbox-checkmark" id="sabor_7" name="sabor_7" type="checkbox">
+                </div>
+
+                <div class="form__checkbox form__checkbox-input">
+                    <label for="sabor_8">Cheescake</label>
+                    <input class="form__checkbox-checkmark" id="sabor_8" name="sabor_8" type="checkbox">
+                </div>
+            </div>
+
+
+            <h3 class="form__inputs-subtitle">Adornos</h3>
+            <div class="form__content form__checkboxes">
+                <div class="form__checkbox">
+                    <label for="adorno_1">Ganache</label>
+                    <input class="form__checkbox-checkmark" id="adorno_1" name="adorno_1" type="checkbox">
+                </div>
+
+                <div class="form__checkbox form__checkbox-input">
+                    <label for="adorno_2">Chocolate Blanco</label>
+                    <input class="form__checkbox-checkmark" id="adorno_2" name="adorno_2" type="checkbox">
+                </div>
+
+                <div class="form__checkbox">
+                    <label for="adorno_3">Ferrero</label>
+                    <input class="form__checkbox-checkmark" id="adorno_3" name="adorno_3" type="checkbox">
+                </div>
+
+                <div class="form__checkbox form__checkbox-input">
+                    <label for="adorno_4">Cocoa</label>
+                    <input class="form__checkbox-checkmark" id="adorno_4" name="adorno_4" type="checkbox">
+                </div>
+
+                <div class="form__checkbox">
+                    <label for="adorno_5">Soletas</label>
+                    <input class="form__checkbox-checkmark" id="adorno_5" name="adorno_5" type="checkbox">
+                </div>
+
+                <div class="form__checkbox form__checkbox-input">
+                    <label for="adorno_6">Philadelphia</label>
+                    <input class="form__checkbox-checkmark" id="adorno_6" name="adorno_6" type="checkbox">
+                </div>
+
+                <div class="form__checkbox">
+                    <label for="adorno_7">Oreo</label>
+                    <input class="form__checkbox-checkmark" id="adorno_7" name="adorno_7" type="checkbox">
+                </div>
+
+                <div class="form__checkbox form__checkbox-input">
+                    <label for="adorno_8">Choco Bites</label>
+                    <input class="form__checkbox-checkmark" id="adorno_8" name="adorno_8" type="checkbox">
+                </div>
+            </div>
+            <a class="home__buttons form__button" href="#menu__container">
+                <button class="button" type="submit" value="submit">
+                    Hacer Pedido
+                    <img class="button__icon" src="./assets/img/button-icon.svg" alt="Icono La Delicia">
+                </button>
+            </a>
+        </form>
+    </section>
+    <!--===== END OF SECTION | FORM ======-->
+
+
+    <img src="assets/img/menu-separator.png" alt="" class="footer__separator">
+    <footer class="section footer">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a class="footer__logo" href="#">
+                    <img class="footer__logo-img" src="assets/img/logo-light-img.png" alt="Logo La Delicia">
+                </a>
+                <p class="footer__description">Disfruta los pasteles <br> más ricos de México</p>
+
+                <div class="footer__social">
+                    <a class="footer__social-link" href="#" target="_blank">
+                        <i class="bx bxl-linkedin"></i>
+                    </a>
+                    <a class="footer__social-link" href="#" target="_blank">
+                        <i class="bx bxl-instagram"></i>
+                    </a>
+                    <a class="footer__social-link" href="#" target="_blank">
+                        <i class="bx bxl-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Enlaces</h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="index.html" class="footer__link">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="clientes.html" class="footer__link">Página Clientes</a>
+                    </li>
+                    <li>
+                        <a href="pastelero.html" class="footer__link">Página Pastelero</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Contacto</h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Tel: 55 55 55 55</a>
+                    </li>
+                    <li class="footer__link">
+                        Horarios: Lunes - Domingo de 8:00 am a 22:00 pm
+                    </li>
+                    <li class="footer__link">
+                        Pastelería la Delicia &copy
+                    </li>
+                </ul>
+            </div>
+            <span class="footer__copy">&#169; Antonicodes. Proyecto Semana 2 Kata Launch X</span>
         </div>
     </footer>
+    <footer>
+        <div>
+        </div>
+    </footer>
+
+    <script src="src/js/main.js"></script>
 </body>
 
 </html>
