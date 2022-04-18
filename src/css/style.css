@@ -488,7 +488,7 @@ video {
 }
 
 .home__title {
-    font-size    : 3rem;
+    font-size    : 2.5rem;
     margin-bottom: var(--mb_2);
     padding-top  : 9.5rem;
 }
@@ -509,7 +509,7 @@ video {
 }
 
 .home__data-img {
-    width: 320px;
+    width: 305px;
 }
 
 .swiper-pagination {
