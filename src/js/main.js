@@ -95,7 +95,7 @@ const sr = ScrollReveal({
 
 sr.reveal('.swiper-wrapper, .home__title, .page__title');
 sr.reveal(' .form__fieldset, .form__checkboxes, .footer__container, .orders__client', { interval: 130 });
-sr.reveal('.home__title, .section__title, .home__buttons, .rem__more-title, .rem__total', { origin: 'left' });
+sr.reveal('.home__title, .section__title, .rem__more-title, .rem__total', { origin: 'left' });
 sr.reveal('.flavors__container, .decorations__container, .form__inputs-subtitle, .rem__flavours-content', { origin: 'right' });
 
 
