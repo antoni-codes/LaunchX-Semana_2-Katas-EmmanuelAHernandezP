@@ -79,7 +79,26 @@ function scrollUp() {
 }
 
 window.addEventListener('scroll', scrollUp);
+/*=====  END OF SECTION | SHOW SCROLL UP ======*/
+
+
+/*=============================================
+=  START SECTION | SCROLL REVEAL ANIMATION    =
+=============================================*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+    // reset:true,
+});
+
+sr.reveal('.swiper-wrapper, .home__title');
+sr.reveal(' .form__fieldset, .form__checkboxes, .footer__container', { interval: 130 });
+sr.reveal('.home__title, .section__title, .home__buttons', { origin: 'left' });
+sr.reveal('.flavors__container, .decorations__container, .form__inputs-subtitle', { origin: 'right' });
 
 
 
-/*=====  END OF SECTION | comment ======*/
+
+/*=====  END OF SECTION | SCROLL REVEAL ANIMATION ======*/
