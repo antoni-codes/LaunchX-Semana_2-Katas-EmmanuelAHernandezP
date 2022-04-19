@@ -53,7 +53,7 @@ const homeSwiper = new Swiper('.home-swiper', {
 const scrollHeader = () => {
     const header = document.getElementById('header');
     // When the scroll is greater than 100 viewport height, add the scroll-header class to the header tag
-    if(this.scrollY >= 100) {
+    if (this.scrollY >= 100) {
         header.classList.add('scroll-header');
     } else {
         header.classList.remove('scroll-header');
@@ -61,7 +61,25 @@ const scrollHeader = () => {
 }
 
 window.addEventListener('scroll', scrollHeader);
-
-
-
 /*=====  END OF SECTION | CHANGE BACKGROUND NAV ======*/
+
+/*=============================================
+=      START SECTION | SHOW SCROLL UP         =
+=============================================*/
+function scrollUp() {
+    const scrollUp = document.getElementById('scroll-up');
+    /*when the scroll is higher than 460 Viewport height, add the show-scroll class
+    to the "a" tag wuth the scroll-up*/
+
+    if (this.scrollY >= 460) {
+        scrollUp.classList.add('show-scrollUp');
+    } else {
+        scrollUp.classList.remove('show-scrollUp');
+    }
+}
+
+window.addEventListener('scroll', scrollUp);
+
+
+
+/*=====  END OF SECTION | comment ======*/
