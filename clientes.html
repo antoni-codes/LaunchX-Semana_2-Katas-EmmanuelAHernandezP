@@ -64,13 +64,13 @@
             <div class="swiper home-swiper">
                 <h1 class="home__title">MENU <br> LA DELICIA</h1>
                 <div class="swiper-wrapper">
+
                     <div class="swiper-slide">
                         <div class="home__content grid">
                             <div class="home__text">
                                 <p>
                                     Rico Pastel de chocolate relleno de mousse de cajeta con trozos de chocolate Milky
-                                    Way®
-                                    y pasitas con chocolate.
+                                    Way® y pasitas con chocolate.
                                     Decorado con mousse de cajeta y crema de chocolate.
                                 </p>
                                 <a class="home__buttons-responsive" href="#">
@@ -83,7 +83,7 @@
                             </div>
 
                             <div class="home__data">
-                                <a class="home__buttons" href="#">
+                                <a class="home__buttons hidden" href="#">
                                     <button class="button">
                                         Ver Pastel
                                         <img class="button__icon" src="./assets/img/button-icon.svg"
@@ -101,10 +101,9 @@
                             <div class="home__text">
                                 <p>
                                     Delicioso Pastel de vainilla bañado con nuestra receta especial de tres leches y
-                                    licor de
-                                    café. Cubierto con crema de café, vainilla y canela.
+                                    licor de café. Cubierto con crema de café, vainilla y canela.
                                 </p>
-                                <a class="home__buttons-responsive" href="#menu__container">
+                                <a class="home__buttons-responsive" href="#">
                                     <button class="button">
                                         Ver Pastel
                                         <img class="button__icon" src="./assets/img/button-icon.svg"
@@ -114,7 +113,7 @@
                             </div>
 
                             <div class="home__data">
-                                <a class="home__buttons hidden" href="#menu__container">
+                                <a class="home__buttons hidden" href="#">
                                     <button class="button">
                                         Ver Pastel
                                         <img class="button__icon" src="./assets/img/button-icon.svg"
@@ -134,7 +133,7 @@
                                     Budín con nuestra deliciosa mezcla de zanahorias, piña, nueces y pasas.
                                     Decorado con suave crema de queso Philadelphia®.
                                 </p>
-                                <a class="home__buttons-responsive" href="#menu__container">
+                                <a class="home__buttons-responsive" href="#">
                                     <button class="button">
                                         Ver Pastel
                                         <img class="button__icon" src="./assets/img/button-icon.svg"
@@ -144,7 +143,7 @@
                             </div>
 
                             <div class="home__data">
-                                <a class="home__buttons hidden" href="#menu__container">
+                                <a class="home__buttons hidden" href="#">
                                     <button class="button">
                                         Ver Pastel
                                         <img class="button__icon" src="./assets/img/button-icon.svg"
@@ -162,10 +161,10 @@
                             <div class="home__text">
                                 <p>
                                     Pastel de avellanas, relleno con mousse de avellana y crocante de avellanas
-                                    tostadas.
-                                    Cubierto con mousse de chocolate y adornado con auténticos chocolates Ferrero®.
+                                    tostadas. Cubierto con mousse de chocolate y adornado con auténticos chocolates
+                                    Ferrero®.
                                 </p>
-                                <a class="home__buttons-responsive" href="#menu__container">
+                                <a class="home__buttons-responsive" href="#">
                                     <button class="button">
                                         Ver Pastel
                                         <img class="button__icon" src="./assets/img/button-icon.svg"
@@ -175,7 +174,7 @@
                             </div>
 
                             <div class="home__data">
-                                <a class="home__buttons hidden" href="#menu__container">
+                                <a class="home__buttons hidden" href="#">
                                     <button class="button">
                                         Ver Pastel
                                         <img class="button__icon" src="./assets/img/button-icon.svg"
@@ -188,8 +187,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
             </div>
         </section>
         <!--===== END OF SECTION | HOME ======-->
@@ -463,7 +460,7 @@
                     <input class="form__checkbox-checkmark" id="adorno_8" name="adorno_8" type="checkbox">
                 </div>
             </div>
-            <a class="home__buttons form__button" href="#menu__container">
+            <a class="home__buttons form__button" href="#">
                 <button class="button" type="submit" value="submit">
                     Hacer Pedido
                     <img class="button__icon" src="./assets/img/button-icon.svg" alt="Icono La Delicia">
@@ -475,7 +472,7 @@
 
 
     <!--==== START SECTION | FOOTER =====-->
-    <img src="assets/img/menu-separator.png" alt="" class="footer__separator">
+    <img class="footer__separator" src="assets/img/menu-separator.png" alt>
     <footer class="section footer">
         <div class="footer__container container grid">
             <div class="footer__content">
@@ -502,13 +499,13 @@
 
                 <ul class="footer__links">
                     <li>
-                        <a href="index.html" class="footer__link">Inicio</a>
+                        <a class="footer__link" href="index.html">Inicio</a>
                     </li>
                     <li>
-                        <a href="clientes.html" class="footer__link">Página Clientes</a>
+                        <a class="footer__link" href="clientes.html">Página Clientes</a>
                     </li>
                     <li>
-                        <a href="pastelero.html" class="footer__link">Página Pastelero</a>
+                        <a class="footer__link" href="pastelero.html">Página Pastelero</a>
                     </li>
                 </ul>
             </div>
@@ -518,7 +515,7 @@
 
                 <ul class="footer__links">
                     <li>
-                        <a href="#" class="footer__link">Tel: 55 55 55 55</a>
+                        <a class="footer__link" href="#">Tel: 55 55 55 55</a>
                     </li>
                     <li class="footer__link">
                         Horarios: Lunes - Domingo de 8:00 am a 22:00 pm
@@ -534,8 +531,8 @@
     <!--===== END OF SECTION | FOOTER ======-->
 
     <!--==== START SECTION | SCROLL UP =====-->
-    <a href="#" class="scrollUp" id="scroll-up">
-        <i class='bx bx-up-arrow-alt scrollup__icon'></i>
+    <a class="scrollUp" id="scroll-up" href="#">
+        <i class="bx bx-up-arrow-alt scrollup__icon"></i>
     </a>
     <!--===== END OF SECTION | SCROLL UP ======-->
     <script src="src/js/main.js"></script>

@@ -27,14 +27,16 @@ if (navClose) {
 =============================================*/
 const homeSwiper = new Swiper('.home-swiper', {
     // Optional Parameters
+    slidesPerView: 1,
     speed: 1000,
     spaceBetween: 30,
     loop: true,
+    centeredSlides: true,
 
     // Autostart the slider
-    autoplay: {
-        delay: 5000
-    },
+    // autoplay: {
+    //     delay: 5000
+    // },
 
     // if We need pagination
     pagination: {
@@ -42,6 +44,11 @@ const homeSwiper = new Swiper('.home-swiper', {
         clickable: true,
         // type: 'bullets',
     },
+
+    // when window width is >= 640px
+    1360: {
+        spaceBetween: 90
+    }
 
 
 });
