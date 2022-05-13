@@ -1,14 +1,17 @@
-# LaunchX-Semana2-Katas-EmmanuelAHernandezP
+# 👨🏻‍🎓 Katas Semana 2 | Desarrollo Frontend |Misión Front-end | LaunchX
+
+  📖 Descripción: Desarrollo de sitio web, con bonus de CSS completado, Responsive Design, y Github Pages
+
+🧪 Acerca del proyecto:  HTML, CSS & JAVASCRIPT.
+
+👨🏻‍🔬 Author: Antonicodes
+
+## Links
+
+🌐- Live Site URL: [Live Site](https://antoni-codes.github.io/LaunchX-Semana_2-Katas-EmmanuelAHernandezP/)
 
 
-DEPLOYMEN | DESARROLLO DE HTML, CSS & JAVASCRIPT | RESPONSIVE
-https://antoni-codes.github.io/LaunchX-Semana_2-Katas-EmmanuelAHernandezP/
-
-<br>
-<br>
-<br>
-
-MOCKUPS | DESKTOP & MOBILE | RESPONSIVE
+## Mockups | Escritorio & Móvil | Responsive Design
 <br>
 <br>
 ![mockup-1](https://user-images.githubusercontent.com/58191236/164115826-2b386503-f409-49ed-8aa0-f15edca9833f.png)
