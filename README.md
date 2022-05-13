@@ -14,7 +14,8 @@
 ## Mockups | Escritorio & Móvil | Responsive Design
 <br>
 <br>
-![mockup-1](https://user-images.githubusercontent.com/58191236/164115826-2b386503-f409-49ed-8aa0-f15edca9833f.png)
-![mockup-2](https://user-images.githubusercontent.com/58191236/164115834-6a223a23-efc0-44da-8d1a-3d74eed1004a.png)
-![mockup-3](https://user-images.githubusercontent.com/58191236/164115837-0be3ae81-54a8-4bda-b789-53435ae1cfa8.png)
-![mockup-4](https://user-images.githubusercontent.com/58191236/164115842-0930b134-d812-4903-ae95-3e94172ca739.png)
+<br>
+<img src="https://user-images.githubusercontent.com/58191236/164115826-2b386503-f409-49ed-8aa0-f15edca9833f.png" width="700"/>
+<img src="https://user-images.githubusercontent.com/58191236/164115834-6a223a23-efc0-44da-8d1a-3d74eed1004a.png" width="700"/>
+<img src="https://user-images.githubusercontent.com/58191236/164115837-0be3ae81-54a8-4bda-b789-53435ae1cfa8.png" width="700"/>
+<img src="https://user-images.githubusercontent.com/58191236/164115842-0930b134-d812-4903-ae95-3e94172ca739.png" width="700"/>
